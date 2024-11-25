@@ -1,0 +1,31 @@
+Este seria el comando principal para instalar ionic "npm install -g @ionic/cli" , 
+estos primeros pasos serán un resumen de lo que haremos para crear nuestra aplicación paso a paso.
+La idea es solo general el proyecto a través de la documentación oficial de ionic angular V7.
+https://ionicframework.com/docs/v7/angular/your-first-app
+
+
+2-Generamos un proyecto genérico con TABS, incluye 3 y estos los trabajaremos para las diferentes vistas, Home - ComiMap - Recetas
+
+3-Con el comando "ionic generate", nos despliega la opción de elegir crear una pagina, un componente, un servicio, etc. en este caso generamos 3 page, (Home - ComiMap - Recetas).
+Luego Reemplazamos las rutas de nuestra Page genérica tabs-routing.module.ts con nuestras nuevas paginas, luego debemos reemplazar ademas nuestras rutas en tabs.page.html, ya 
+también tendrán las rutas genéricas de tab1, tab2, tab3.
+
+4-Ahora trabajare en el page ComiMaps para lo cual necesitare instalar las dependencias de framework que utilizare,el cual sera mapBox, a través del comando "npm install mapbox-gl"
+la documentación necesaria para instalar las dependencias de mapbox es la oficial y la siguiente https://docs.mapbox.com/mapbox-gl-js/guides/install/
+
+5-La documentación oficial, es de JS Vanilla, nosotros estamos trabajando con TS, por lo tanto deberemos cambiar un poco la sintaxis de lo que nos entrega,
+este código es el básico que se entrega en la documentación oficial.
+En nuestro archivo comi-maps.page.ts en nuestro ciclo ngOnInit usaremos el código básico:
+código de ejemplo:	
+
+    mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        center: [-74.5, 40], // starting position [lng, lat]. Note that lat must be set between -90 and 90
+        zoom: 9 // starting zoom
+    });
+
+, la modificación por ahora seria en mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';, ya que como estamos trabajando con ts, nos pide que indiquemos que tipo de mapboxgl
+por ahora lo dejaremos como "as any", ya que estamos solo tomando el ejemplo para empezar a personalizar nuestro mapa.
+la linea finalmente quedaría como (mapboxgl as any). 
+--------------------En mi mente pienso que debería crear un servicio para consumir la API de mapboxgl y luego importarlo en el modulo de comi-map.page.module.ts y asi hacerlo mas modular.
