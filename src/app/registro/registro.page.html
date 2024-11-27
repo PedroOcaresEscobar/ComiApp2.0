@@ -1,0 +1,22 @@
+
+<ion-content [fullscreen]="true">
+
+  <div class="logo">
+    <ion-img src="../../assets/icon/comiapp-logo.svg"></ion-img>
+  </div>
+
+  <ion-grid class="ion-text-center">
+    <ion-row class="ion-justify-content-center">
+      <ion-label class="lbl-1">Nombre de Usuario</ion-label>
+      <ion-input placeholder="Ingresa tu usuario aqui"></ion-input>
+      <ion-label class="lbl-2">Correo</ion-label>
+      <ion-input placeholder="Ingresa tu correo aqui"></ion-input>
+      <ion-label class="lbl-3">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingresa tu contraseña aqui"></ion-input>
+      <ion-label class="lbl-4">Confirma tu Contraseña</ion-label>
+      <ion-input type="password" placeholder="Confirma tu contraseña aqui"></ion-input>
+    </ion-row>
+    <ion-button class="btn-2"expand="block" (click)="Registro()">Registrarse</ion-button>
+  </ion-grid>
+
+</ion-content>
