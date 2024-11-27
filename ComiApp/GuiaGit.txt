@@ -99,3 +99,10 @@ Con este comando creamos una estructura de directorios (carpetas con subcarpetas
 
 ---cd carpetanueva
 Ingresamos por terminal al directorio deseado.
+
+
+
+--------------------------------Comandos no tan frecuentes------------------------------------------------
+
+Comando para revisar ramas en el repositorio remoto
+git branch -r

@@ -43,18 +43,21 @@ quedara expuesto igual por ahora.
 -2) Mostrar Restaurantes cercanos.
 -3) Agregar iconos personalizados.
 
--1)Para hacer que el map se ubique según nuestra geolocalización, usaremos una api nativa de html para llamada HTML Geolocation, la documentación que revise fue https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
-en esta nos entregan un script el cual adaptaremos para nuestra aplicación.
-ejemplo:
+-1)Para hacer que el map se ubique según nuestra geolocalización, usaremos una api de geolocalización de javascript, la documentación que revisé
+esta disponible en este link https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
+en este nos entrega un código básico el cual debemos adaptar:
 navigator.geolocation.getCurrentPosition((position) => {
   doSomething(position.coords.latitude, position.coords.longitude);
 });
 
-bien de esto tomaremos la función navigator.geolocation la cual tiene el método getCurrentPosition que nos devuelve la posición actual como se muestra en la función showPosition
+bien de esto tomaremos la el objeto navigator.geolocation la cual nos proporciona el método getCurrentPosition del cual obtenemos la ubicación actual y 
+llama a una función callback con los datos obtenidos.
 . Nos quedaremos entonces con las siguiente información:
 navigator.geolocation.getCurrentPosition((posición) => {})
-bueno getcurrent nos devuelve la ubicacion en este caso laa llamaremos posición y este nos entregara posición.coords.latitude,position.coords.longitude
-entonces usamos function arrow para llamar al método de clase de nuestro comi-maps.page.ts y le damos los parametros => {this.iniciarMaps( posición.coords.latitude,position.coords.longitude)}
+
+bueno getCurrentPosition nos devuelve la ubicación en este caso laa llamaremos posición y este nos entregara posición.coords.latitude y position.coords.longitude
+entonces usamos function arrow para llamar al método de clase de nuestro comi-maps.page.ts y entregamos
+ los parametros => {this.iniciarMaps( posición.coords.latitude,position.coords.longitude)}
 le entregamos estos props a nuestro método de clase que definimos previamente iniciarMaps(lat:number,lon:number)
 y dentro de nuestra método iniciarMaps inicializamos las variables obtenidas del código básico de la documentación de mapbox.
 
@@ -62,10 +65,17 @@ Hasta ahora hemos utilizado la librería mapboxgl y la API de geo-localización 
 
 para agregar una marca a la posición en la cual nos encontramos en este link https://docs.mapbox.com/mapbox-gl-js/api/markers/ encontramos la documentación necesaria.
 usaremos el siguiente código para usar una marca basica https://docs.mapbox.com/mapbox-gl-js/api/markers/ 
-ojo, que para que los marcadores funciones, debemos incluir la hoja de estilo en nuestro archivo index.html. estos se pueden encontrar en: https://docs.mapbox.com/mapbox-gl-js/guides/install/
+ojo, que para que los marcadores funciones, debemos incluir la hoja de estilo en nuestro archivo index.html.
+ estos se pueden encontrar en: https://docs.mapbox.com/mapbox-gl-js/guides/install/
 el código básico para agregar una marca es la siguiente: 
    const marker1 = new mapboxgl.Marker()
         .setLngLat([12.554729, 55.70651])
         .addTo(map);
 la idea es que este método este dentro de nuestro otro método iniciarMaps, asi aprovechamos los props.
+   const marker = new mapboxgl.Marker()
+        .setLngLat([lon,lat])
+        .addTo(map);
+Con esto ya podremos ver el mapa y la ubicación de donde lo estamos viendo.
 
+
+-2)

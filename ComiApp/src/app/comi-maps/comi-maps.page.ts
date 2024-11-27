@@ -36,7 +36,7 @@ export class ComiMapsPage implements OnInit {
   .setLngLat([lon, lat])
   .addTo(map);
 
-// Create a default Marker, colored black, rotated 45 degrees.
+
 
 }
 }
