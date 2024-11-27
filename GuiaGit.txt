@@ -106,3 +106,33 @@ Ingresamos por terminal al directorio deseado.
 
 Comando para revisar ramas en el repositorio remoto
 git branch -r
+
+Con el siguiente comando subiremos de nivel de carpetas a todos los archvios:
+mv comiapp/*
+
+y con este incluiremos los que estan en el gitIgnore
+mv comiapp/.*
+
+Luego para eliminar la carpeta que no queremos utilizar:
+ rmdir comiapp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
