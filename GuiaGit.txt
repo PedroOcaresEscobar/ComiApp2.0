@@ -58,6 +58,9 @@ Cada rama es una linea independiente de desarrollo.
 ---git branch
 Nos indica en que rama estamos.
 
+---git branch -r
+Nos indica las ramas de nuestro repositorio remoto.
+
 ---git branch ramaPrueba
 Creamos otra rama llamada ramaPrueba
 
