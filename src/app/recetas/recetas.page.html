@@ -1,13 +1,21 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>Recetas</ion-title>
+    <ion-title>Buscar Recetas</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Recetas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-searchbar
+    placeholder="Buscar recetas..."
+    (ionInput)="onSearch($event)"
+  ></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let recipe of recipes">
+      <ion-label>
+        <h2>{{ recipe.title }}</h2>
+        <p>Ready in: {{ recipe.readyInMinutes }} min</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
