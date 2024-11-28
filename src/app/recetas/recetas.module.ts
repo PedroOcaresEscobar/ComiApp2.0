@@ -15,6 +15,6 @@ import { RecetasPage } from './recetas.page';
     IonicModule,
     RecetasPageRoutingModule
   ],
-  declarations: [RecetasPage]
+  declarations: [RecetasPage, ]
 })
 export class RecetasPageModule {}

@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { RecipeService } from '../services/recipe.service';
 
 @Component({
   selector: 'app-recetas',
   templateUrl: './recetas.page.html',
-  styleUrls: ['./recetas.page.scss'],
+  styleUrls: ['./recetas.page.scss']
 })
-export class RecetasPage implements OnInit {
+export class RecetasPage {
+  recipes: any[] = [];
 
-  constructor() { }
+  constructor(private recipeService: RecipeService) {}
 
-  ngOnInit() {
+  onSearch(event: any) {
+    const query = event.target.value;
+
+    if (query && query.trim() !== '') {
+      this.recipeService.searchRecipes(query).subscribe((data: any) => {
+        this.recipes = data.results; 
+      });
+    }
   }
-
 }
