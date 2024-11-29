@@ -1,0 +1,44 @@
+ion-searchbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    background-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  ion-content{
+    --background:rgb(207, 129, 77);
+}
+ion-toolbar{
+  --background: rgb(87, 42, 13);
+}
+
+ion-card {
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: rgb(145, 62, 24);
+
+  }
+  ion-card-title{
+    color: rgb(255, 242, 237);
+  }
+  ion-card-content{
+    color:#ffcbb2;
+  }
+  
+  ion-img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+ion-searchbar{
+    background-color:  rgb(87, 42, 13);
+    color: black;
+}
+ion-searchbar {
+    --background: #f0f0f0; 
+    --border-radius: 25px;
+    --padding-start: 10px; 
+    --padding-end: 10px; 
+    --box-shadow: none; 
+  }

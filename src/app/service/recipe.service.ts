@@ -10,13 +10,11 @@ export class RecipeService {
 
   constructor(private http: HttpClient) {}
 
-  // Buscar recetas según una palabra clave
-  searchRecipes(query: string) {
-    const url = `${this.baseUrl}/complexSearch?query=${query}&apiKey=${environment.spoonacularApiKey}&number=10`;
+  searchRecipes(query: string, offset: number = 0, number: number = 10) {
+    const url = `${this.baseUrl}/complexSearch?query=${query}&apiKey=${environment.spoonacularApiKey}&number=${number}&offset=${offset}`;
     return this.http.get(url);
   }
 
-  // Obtener detalles de una receta específica por ID
   getRecipeDetails(recipeId: number) {
     const url = `${this.baseUrl}/${recipeId}/information?apiKey=${environment.spoonacularApiKey}`;
     return this.http.get(url);

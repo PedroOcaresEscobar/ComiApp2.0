@@ -11,7 +11,7 @@ import { RecipeDetailsPage } from './recipe-details.page';
     FormsModule,
     IonicModule,
   ],
-  declarations: [RecipeDetailsPage], // Declara solo RecipeDetailsPage
-  exports: [RecipeDetailsPage], // Exporta para que otros módulos puedan usarlo
+  declarations: [RecipeDetailsPage],
+  exports: [RecipeDetailsPage],
 })
 export class RecipeDetailsPageModule {}

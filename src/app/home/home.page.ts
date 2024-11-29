@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { obtenerNovedades } from '../mock';
+import { InfiniteScrollCustomEvent } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
+  novedades: any[] = [];
 
-  constructor() { }
+  constructor() {
+    this.loadMoreItems();
+  }
 
-  ngOnInit() {
+  loadMoreItems() {
+    const newItems = obtenerNovedades();
+    this.novedades = this.novedades.concat(newItems);
   }
 
 }

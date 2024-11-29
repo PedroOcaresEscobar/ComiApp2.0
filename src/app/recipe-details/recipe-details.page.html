@@ -8,10 +8,16 @@
 </ion-header>
 
 <ion-content>
-  <ion-img [src]="recipeDetails?.image" alt="{{ recipeDetails?.title }}"></ion-img>
-  <ion-list>
-    <ion-item *ngFor="let step of recipeDetails?.analyzedInstructions[0]?.steps">
-      <ion-label>{{ step.number }}. {{ step.step }}</ion-label>
-    </ion-item>
-  </ion-list>
+  <div *ngIf="loading" class="spinner-container">
+    <ion-spinner name="crescent"></ion-spinner> 
+  </div>
+
+  <div *ngIf="!loading">
+    <ion-img [src]="recipeDetails?.image" alt="{{ recipeDetails?.title }}"></ion-img>
+    <ion-list>
+      <ion-item *ngFor="let step of recipeDetails?.analyzedInstructions[0]?.steps">
+        <ion-label>{{ step.number }}. {{ step.step }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

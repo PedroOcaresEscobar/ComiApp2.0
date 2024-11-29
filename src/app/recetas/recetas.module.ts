@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { RecetasPageRoutingModule } from './recetas-routing.module';
 import { RecetasPage } from './recetas.page';
-import { RecipeDetailsPageModule } from '../recipe-details/recipe-details.module'; // Importa el módulo del modal
+import { RecipeDetailsPageModule } from '../recipe-details/recipe-details.module'; 
 
 @NgModule({
   imports: [
@@ -13,7 +13,7 @@ import { RecipeDetailsPageModule } from '../recipe-details/recipe-details.module
     FormsModule,
     IonicModule,
     RecetasPageRoutingModule,
-    RecipeDetailsPageModule, // Importa el módulo del modal
+    RecipeDetailsPageModule, 
   ],
   declarations: [RecetasPage],
 })

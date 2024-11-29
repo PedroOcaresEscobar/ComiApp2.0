@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, OnInit } from '@angular/core';
+import { NavParams } from '@ionic/angular'; 
 import { RecipeService } from '../service/recipe.service';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-recipe-details',
@@ -8,22 +9,36 @@ import { RecipeService } from '../service/recipe.service';
   styleUrls: ['./recipe-details.page.scss'],
 })
 export class RecipeDetailsPage implements OnInit {
-  @Input() recipeId!: number; // ID de la receta recibida del padre
-  recipeDetails: any; // Detalles de la receta
+  recipeDetails: any;  
+  loading: boolean = true;  
 
   constructor(
     private recipeService: RecipeService,
+    private navParams: NavParams,
     private modalController: ModalController
   ) {}
 
   ngOnInit() {
-    // Cargar detalles de la receta
-    this.recipeService.getRecipeDetails(this.recipeId).subscribe((data: any) => {
-      this.recipeDetails = data;
-    });
+    const recipeId = this.navParams.get('recipeId');  
+    this.loadRecipeDetails(recipeId);
   }
 
-  // Cerrar el modal
+  loadRecipeDetails(recipeId: number) {
+    this.recipeService.getRecipeDetails(recipeId).subscribe(
+      (data: any) => {
+        this.recipeDetails = data; 
+        setTimeout(() => {
+          this.loading = false; 
+        }, 1500);
+      },
+      (error) => {
+        console.error('Error cargando los detalles de la receta', error);
+        this.loading = false; 
+      }
+    );
+  }
+
+
   closeModal() {
     this.modalController.dismiss();
   }
