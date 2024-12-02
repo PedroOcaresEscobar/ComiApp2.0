@@ -7,8 +7,12 @@ import * as mapboxgl from 'mapbox-gl';
 export class MapBoxService {
   private accessToken = environment.mapbox.accessToken
   map!: mapboxgl.Map;
-  constructor() {
   
+  constructor(
+    
+  ) {
+        
+
     } 
     
     permisosMapa(){
@@ -33,7 +37,7 @@ export class MapBoxService {
     marcadorUsuario.classList.add('iconoUsuario')
   
   
-    const marker = new mapboxgl.Marker(marcadorUsuario)
+    new mapboxgl.Marker(marcadorUsuario)
     .setLngLat([lon, lat])
     .addTo(this.map);
 
@@ -52,11 +56,16 @@ export class MapBoxService {
       const restaurantLngLat = feature.geometry.coordinates;
       const nombreRestaurant = feature.place_name;
   
-      new mapboxgl.Marker()
+
+
+      const marcadorRestaurantes = document.createElement('div')
+      marcadorRestaurantes.classList.add('iconoRestaurante')
+
+      new mapboxgl.Marker(marcadorRestaurantes)
       .setLngLat(restaurantLngLat)
       .setPopup(new mapboxgl.Popup().setHTML(`<h3>${nombreRestaurant}</h3>`))
       .addTo(this.map);
-  
+
     })
   
   }
