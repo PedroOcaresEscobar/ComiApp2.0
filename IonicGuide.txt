@@ -40,8 +40,9 @@ quedara expuesto igual por ahora.
 
 6-En este paso debo seguir leyendo la documentación para personalizar:
 -1) Hacer que según la ubicación del dispositivo se establezcan la latitud y longitud.
--2) Mostrar Restaurantes cercanos.
--3) Agregar iconos personalizados.
+-2) Agregar iconos personalizados.
+-3)  Mostrar Restaurantes cercanos.
+
 
 -1)Para hacer que el map se ubique según nuestra geolocalización, usaremos una api de geolocalización de javascript, la documentación que revisé
 esta disponible en este link https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
@@ -78,4 +79,21 @@ la idea es que este método este dentro de nuestro otro método iniciarMaps, asi
 Con esto ya podremos ver el mapa y la ubicación de donde lo estamos viendo.
 
 
--2)
+-2)para crear un estilo propio segun la documentación, nos hacen crear un 
+div, y a este agregarl los style por js, creo que el codgio quedara mas limpio,
+si en vez de eso le agrego una clase de estilo y el estilo que quiero lo hago en el global.
+en este caso, le pase un icono que cree, altura y anchura 50px y que ocupe todo el espacio.
+
+
+-1.1)Voy a crear el servicio para consumir mapbox, para esto voy a crear uno con el comando 
+---------ionic generate service carpeta_contenedora/nombre_servicio
+luego creare dos métodos llamados permisosMapa e iniciarMap. En el primero usaré el objeto
+navigator para verificar si se tienen los permisos de usuario. Si los permisos son otorgados, 
+accederé a la geolocalización  y llamaré a iniciarmap como collback para iniciar el mapa.
+
+
+
+-3)Para buscar los restaurantes, el endpoint de ejemplo que nos entregan en la documentación oficial de mapboxgls
+seria https://docs.mapbox.com/api/search/geocoding-v5/#point-accuracy-for-address-features
+donde debemos cambiar las cordenadas, por las cordenas que obtenemos con el objeto navigate.
+ creamos una funcion asincrona para luego de cargar el mapa y recibir los datos que se marquen los restaaurantes cercanos
