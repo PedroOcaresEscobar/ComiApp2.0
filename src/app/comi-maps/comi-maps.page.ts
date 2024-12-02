@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as mapboxgl from 'mapbox-gl';
-import { environment } from 'src/environments/environment.prod';
+import { MapBoxService } from '../services/map-box.service';
 
 @Component({
   selector: 'app-comi-maps',
@@ -9,34 +8,11 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class ComiMapsPage implements OnInit {
 
-  constructor() { }
+  constructor(private mapa : MapBoxService) { }
 
   ngOnInit() {
-	(mapboxgl as any).accessToken = environment.mapbox.accessToken;
+    this.mapa.permisosMapa();
+  }  
 
 
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((pos) => {this.iniciarMap(pos.coords.latitude,pos.coords.longitude)});
-    } 
-    
-  
-
-
-}  iniciarMap(lat:number,lon:number){
-  // Create a new marker.
-
-	const map = new mapboxgl.Map({
-	container: 'map', 
-	style: 'mapbox://styles/mapbox/streets-v12', 
-	center: [lon, lat], 
-	zoom: 14, 
-  
-  });
-  const marker = new mapboxgl.Marker()
-  .setLngLat([lon, lat])
-  .addTo(map);
-
-
-
-}
 }

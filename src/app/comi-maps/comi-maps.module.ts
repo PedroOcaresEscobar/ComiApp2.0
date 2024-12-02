@@ -8,12 +8,13 @@ import { ComiMapsPageRoutingModule } from './comi-maps-routing.module';
 
 import { ComiMapsPage } from './comi-maps.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ComiMapsPageRoutingModule
+    ComiMapsPageRoutingModule,
   ],
   declarations: [ComiMapsPage]
 })
