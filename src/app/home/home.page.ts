@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { obtenerNovedades } from '../mock';
+<<<<<<< HEAD
 import { InfiniteScrollCustomEvent } from '@ionic/angular';
+=======
+>>>>>>> NuevaRama
 
 @Component({
   selector: 'app-home',

@@ -7,7 +7,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+<<<<<<< HEAD
     "watch": "ng build --watch --configuration development",
+=======
+    "watch": "ng build --watch --configuration development --code-coverage",
+>>>>>>> NuevaRama
     "test": "ng test",
     "lint": "ng lint"
   },
