@@ -3,31 +3,19 @@ export const novedadesMock = [
         id: 1, 
         titulo: "Prueba el nuevo plato: Sushi Tropical", 
         img: "https://i.blogs.es/a17c5d/como-hacer-sushi-maki-recetas-mexico/1366_2000.jpg", 
-<<<<<<< HEAD
-        descripcion: "Una fusión de sushi tradicional con toques tropicales. Disponible en 'Sushi del Mar'.", 
-=======
         descripcion: "Una fusión de sushi tradicional con toques tropicales. Disponible en Sushi del Mar.", 
->>>>>>> NuevaRama
     },
     { 
         id: 2, 
         titulo: "¡Nuevo Local de Hamburguesas Artesanales!", 
         img: "https://www.unileverfoodsolutions.com.co/dam/global-ufs/mcos/NOLA/calcmenu/recipes/col-recipies/fruco-tomate-cocineros/HAMBURGUESA%201200x709.png", 
-<<<<<<< HEAD
-        descripcion: "Descubre el sabor único de nuestras hamburguesas artesanales en 'Burguer Kingstown'.", 
-=======
         descripcion: "Descubre el sabor único de nuestras hamburguesas artesanales en Burguer Kingstown.", 
->>>>>>> NuevaRama
     },
     { 
         id: 3, 
         titulo: "Local Mejor Valorado del Mes", 
         img: "https://www.cote.co.uk/_next/image?url=%2FrestaurantsHeader.webp&w=3840&q=75", 
-<<<<<<< HEAD
-        descripcion: "El restaurante 'Sabores de Casa' ha sido elegido el mejor del mes con un promedio de 4.9 estrellas.", 
-=======
         descripcion: "El restaurante Sabores de Casa ha sido elegido el mejor del mes con un promedio de 4.9 estrellas.", 
->>>>>>> NuevaRama
     },
     { 
         id: 4, 

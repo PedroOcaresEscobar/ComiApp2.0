@@ -1,20 +1,15 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RecetasPage } from './recetas.page';
-<<<<<<< HEAD
-=======
 import { RecipeDetailsPage } from '../recipe-details/recipe-details.page';
 import { RecipeService } from '../service/recipe.service';
 import { ModalController } from '@ionic/angular';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
->>>>>>> NuevaRama
 
 describe('RecetasPage', () => {
   let component: RecetasPage;
   let fixture: ComponentFixture<RecetasPage>;
 
-<<<<<<< HEAD
   beforeEach(() => {
-=======
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [RecetasPage],
@@ -28,7 +23,6 @@ describe('RecetasPage', () => {
       ],
     }).compileComponents();
   
->>>>>>> NuevaRama
     fixture = TestBed.createComponent(RecetasPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -37,8 +31,6 @@ describe('RecetasPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-<<<<<<< HEAD
-=======
 
   it('deberia crear un modal', async () => {
     const mockModal = { present: jasmine.createSpy('present') };
@@ -57,5 +49,4 @@ describe('RecetasPage', () => {
   });
   
   
->>>>>>> NuevaRama
-});
+});})
