@@ -1,0 +1,53 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px; 
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
+  ion-img {
+    width: 200px;
+    height: 200px;
+    animation: scaleAnimation 3s infinite ease-in-out;
+  }
+  
+ion-content{
+    --background:rgb(207, 129, 77);
+}
+
+ion-input{
+    --color:black;
+    --background:rgba(255, 255, 255, 0.913);
+    --border-radius: 10px;
+}
+
+ion-button{
+    --color:white;
+    --background:rgb(131, 68, 44);
+}
+
+.btn-2{
+    margin-top: 20px;
+}
+
+@keyframes scaleAnimation {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+}
+
+.lbl-2{
+  margin-top:10px
+}
+.lbl-3{
+  margin-top:10px
+}
+.lbl-4{
+  margin-top:10px
+}
