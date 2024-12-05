@@ -49,7 +49,7 @@ Con este Comando clonamos nuestro repositorio remoto en nuestra carpeta o repost
 Con este comando clonamos el repositorio remotoro en la rama que nosotros seleccionemos con el -b y el nombre de la rama preferia
 ---git clone -b rama_preferida "url_de_repositorio_remoto"
 
-
+asdasdasdasd xd
 
 -------------------Control de ramas Branches------------------------
 
