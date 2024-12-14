@@ -5,25 +5,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   {
-    path: '',
+    path: 'tabsM',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: 'comi-maps',
-    loadChildren: () => import('./comi-maps/comi-maps.module').then( m => m.ComiMapsPageModule)
-  },
-  {
-    path: 'recetas',
-    loadChildren: () => import('./recetas/recetas.module').then( m => m.RecetasPageModule)
-
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then(m => m.RegistroPageModule)
   }
 
 ];
