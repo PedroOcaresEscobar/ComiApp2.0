@@ -40,7 +40,6 @@ export class RegistroPage {
       this.account.email;
   }
 
-  // Función para registrarse
  // Función para registrarse
  async Resgistrarse() {
   try {
