@@ -20,10 +20,8 @@ export class HomePage {
     this.novedades = this.novedades.concat(newItems);
   }
   logout() {
-    // Limpia los datos del usuario (localStorage o cualquier otra lógica que tengas)
     localStorage.clear(); 
 
-    // Redirecciona a la página de inicio de sesión
     this.router.navigate(['/']);
   }
 
