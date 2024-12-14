@@ -24,7 +24,7 @@ export class HomePage {
     localStorage.clear(); 
 
     // Redirecciona a la página de inicio de sesión
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 
 }

@@ -5,3 +5,23 @@ ion-label{
     color: white;
 }
 
+.custom-icon {
+    width: 24px; /* Ajusta el tamaño */
+    height: 24px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("https://res.cloudinary.com/dohzxybxz/image/upload/v1730295321/icono.map.comiapp_phgzdq.svg");
+  }
+  
+  .custom-icon-2{
+    width: 24px; /* Ajusta el tamaño */
+    height: 24px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("https://res.cloudinary.com/dohzxybxz/image/upload/v1730295905/icono.restaurant.map.comiapp_ahb1rn.svg");  
+}
+  

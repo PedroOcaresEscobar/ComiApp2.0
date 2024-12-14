@@ -1,5 +1,7 @@
 ion-item{
     --background:rgb(87, 42, 13);
+  --color: white;
+
 }
 ion-toolbar{
     --background: rgb(87, 42, 13);
@@ -11,7 +13,23 @@ ion-toolbar{
   height: 100%;
   background-color: rgb(207, 129, 77);
 }
+ion-header{
 
+  ion-title{
+    --color: white;
+  
+  }
+  
+
+  ion-button{
+    --color: white;
+  
+  }
+
+}
 ion-content {
   --background: rgb(207, 129, 77);
+
 }
+
+
