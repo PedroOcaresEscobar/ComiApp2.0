@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { RecipeService } from '../service/recipe.service';
 import { RecipeDetailsPage } from '../recipe-details/recipe-details.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recetas',
@@ -17,7 +18,8 @@ export class RecetasPage implements OnInit {
 
   constructor(
     private recipeService: RecipeService,
-    private modalController: ModalController
+    private modalController: ModalController,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -66,5 +68,13 @@ export class RecetasPage implements OnInit {
     setTimeout(() => {
       event.target.complete(); // Finalizar el evento de scroll infinito
     }, 1000); // Retraso de 1 segundo para mostrar la barra de carga
+  }
+
+  logout() {
+    // Limpia los datos del usuario (localStorage o cualquier otra lógica que tengas)
+    localStorage.clear(); 
+
+    // Redirecciona a la página de inicio de sesión
+    this.router.navigate(['/login']);
   }
 }
